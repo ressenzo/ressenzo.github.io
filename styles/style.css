@@ -1,0 +1,50 @@
+.summary {
+    width: 30%;
+    background: #000076;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+}
+.summary a {
+    color: #FFF;
+}
+
+
+.main {
+    margin-left: 30%;
+    width: 70%;
+    padding: 20px;
+    background: #fffefe;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.main .main-item {
+    margin-bottom: 40px;
+}
+
+.main .main-item p.text-uppercase {
+    margin-top: -13px;
+}
+
+@media (max-width: 768px) {
+    .summary {
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        background: #333;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .main {
+        margin-left: 0;
+        width: 100%;
+    }
+}
