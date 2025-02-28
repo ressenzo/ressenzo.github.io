@@ -36,12 +36,34 @@
     margin-top: -10px;
 }
 
+@media (min-width: 767.99px) {
+    .summary-mobile {
+        display: none;
+    }
+}
+
 @media (max-width: 767.98px) {
     .summary {
         display: none;
     }
+
+    .summary-mobile {
+        padding: 20px;
+        background-color: #000076;
+        color: #FFF;
+    }
+
+    .summary-mobile p#location {
+        margin-bottom: 0px;
+    }
+
+    .summary-mobile p a {
+        color: #FFF;
+    }
+
     .main {
         margin-left: 0;
         width: 100%;
+        overflow-y: visible;
     }
 }
