@@ -1,20 +1,13 @@
 const params = new URLSearchParams(window.location.search);
 const language = params.get('l');
 
-const portugueseContent = {
-    country: "Brasil"
-};
-
-const englishContent = {
-    country: "Brazil"
-};
-
-var selectedContent = {};
 if (language === "en") {
-    selectedContent = englishContent;
+    hiddeBlock('#l-pt');
 } else {
-    selectedContent = portugueseContent;
+    hiddeBlock('#l-en');
 }
 
-const countryTag = document.querySelector("#country");
-countryTag.innerHTML = selectedContent.country;
+function hiddeBlock(name) {
+    var languageBlock = document.querySelector(name);
+    languageBlock.style.display = 'none';
+}
