@@ -9,8 +9,8 @@ export default function App() {
 
 	return (
 		<div className="App">
-				<Skills language={param.toString().substring(2)} />
-				<Main language={param.toString().substring(2)} />
+			<Skills language={param.toString().substring(2)} />
+			<Main language={param.toString().substring(2)} />
 		</div>
 	);
 }
