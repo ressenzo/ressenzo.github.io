@@ -5,13 +5,12 @@ import Skills from './components/Skills';
 
 export default function App() {
 
-	const [param, setParam] = useState(new URLSearchParams(window.location.search));
+	const [param, _] = useState(new URLSearchParams(window.location.search));
 
 	return (
 		<div className="App">
-				{param}
-				<Skills language='pt' />
-				<Main />
+				<Skills language={param.toString().substring(2)} />
+				<Main language={param.toString().substring(2)} />
 		</div>
 	);
 }
