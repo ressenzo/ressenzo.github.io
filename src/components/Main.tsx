@@ -1,6 +1,48 @@
+import Item, { ItemProps } from "./Item";
+import Language from "./language";
 import "./Main.css";
 
-export default function Main() {
+interface MainSection {
+    language: string | null;
+    sections: Section[];
+}
+
+interface Section {
+    title: string;
+    items: ItemProps[];
+}
+
+export default function Main({ language }: Language) {
+
+    const sections: MainSection[] = [
+        {
+            language: "pt",
+            sections: [
+                {
+                    title: "Experiencias",
+                    items: []
+                },
+                {
+                    title: "Educação",
+                    items: []
+                }
+            ]
+        },
+        {
+            language: null,
+            sections: [
+                {
+                    title: "Experiences",
+                    items: []
+                },
+                {
+                    title: "Education",
+                    items: []
+                }
+            ]
+        }
+    ]
+
     return (
         <div className="right-column">
             <h3>Experiences</h3>
@@ -75,6 +117,8 @@ export default function Main() {
                 </h5>
                 <p className="text-uppercase"><small className="text-body-secondary">February 2013 - November 2015</small></p>
             </div>
+
+            <Item />
         </div>
     )
 }
