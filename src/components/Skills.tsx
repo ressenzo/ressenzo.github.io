@@ -1,11 +1,8 @@
-import { useDebugValue, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./Skills.css";
+import Language from "./language";
 
-interface SkillsProps {
-    language: string;
-}
-
-interface SelectedSkill {
+interface SkillSection {
     language: string | null;
     country: string;
     linkedinUrl: string;
@@ -15,19 +12,18 @@ interface SelectedSkill {
     languages: string[];
 }
 
-export default function Skills({ language }: SkillsProps) {
+export default function Skills({ language }: Language) {
 
-    const [selectedSkill, setSelectedSkill] = useState<SelectedSkill | undefined>(undefined);
+    const [skill, setSkill] = useState<SkillSection | undefined>(undefined);
 
     useEffect(() => {
         let selected = skills.find(x => x.language === language);
         if (selected == null)
             selected = skills.find(x => x.language == null);
-        console.log(selected)
-        setSelectedSkill(selected);
+        setSkill(selected);
     }, [language])
 
-    const skills: SelectedSkill[] = [
+    const skills: SkillSection[] = [
         {
             language: "pt",
             country: "Brasil",
@@ -75,25 +71,25 @@ export default function Skills({ language }: SkillsProps) {
     return (
         <div className="left-column d-flex flex-column">
             <h1 className="mb-0">Renan Silva</h1>
-            <p className="mb-0">Belo Horizonte, MG - {selectedSkill?.country}</p>
+            <p className="mb-0">Belo Horizonte, MG - {skill?.country}</p>
             <p>
                 <strong>
-                    <a href="https://www.linkedin.com/in/renan-cossenzo/?locale=en_US" target="_blank">Linkedin</a>
+                    <a href={skill?.linkedinUrl} target="_blank">Linkedin</a>
                 </strong>
             </p>
-            <h3>{selectedSkill?.title}</h3>
+            <h3>{skill?.title}</h3>
             <ul className="list-unstyled">
                 {
-                    selectedSkill?.skills.map((v, i) => {
+                    skill?.skills.map((v, i) => {
                         return (<li key={i}>{v}</li>);
                     })
                 }
             </ul>
 
-            <h3>{selectedSkill?.languageTitle}</h3>
+            <h3>{skill?.languageTitle}</h3>
             <ul className="list-unstyled">
                 {
-                    selectedSkill?.languages.map((x, i) => {
+                    skill?.languages.map((x, i) => {
                         return (<li key={i}>{x}</li>)
                     })
                 }
