@@ -25,7 +25,7 @@ export default function Main({ language }: Language) {
                         {
                             order: 1,
                             title: "Desenvolvedor full-stack",
-                            institution: "Cast Group, Belo Horizonte",
+                            institution: "Cast Group, Belo Horizonte, MG",
                             from: "Outubro 2018",
                             to: "Agosto 2019",
                             descriptions: [
@@ -35,7 +35,7 @@ export default function Main({ language }: Language) {
                         {
                             order: 2,
                             title: "Desenvolvedor full-stack",
-                            institution: "Localiza Rent a Car, Belo Horizonte",
+                            institution: "Localiza Rent a Car, Belo Horizonte, MG",
                             from: "Agosto 2019",
                             to: "Outubro 2021",
                             descriptions: [
@@ -46,7 +46,7 @@ export default function Main({ language }: Language) {
                         {
                             order: 3,
                             title: "Desenvolvedor .NET",
-                            institution: "Raro Labs, Belo Horizonte",
+                            institution: "Raro Labs, Belo Horizonte, MG",
                             from: "Novembro 2021",
                             to: "Atual",
                             descriptions: [
@@ -62,7 +62,7 @@ export default function Main({ language }: Language) {
                         {
                             order: 1,
                             title: "Técnico em Informática",
-                            institution: "Colégio COTEMIG, Belo Horizonte",
+                            institution: "Colégio COTEMIG, Belo Horizonte, MG",
                             from: "Fevereiro 2013",
                             to: "Novembro 2015",
                             descriptions: []
@@ -70,7 +70,7 @@ export default function Main({ language }: Language) {
                         {
                             order: 2,
                             title: "Bacharel em Sistemas de Informação",
-                            institution: "Pontifícia Universidade Católica de Minas Gerais, Contagem",
+                            institution: "Pontifícia Universidade Católica de Minas Gerais, Contagem, MG",
                             from: "Fevereiro 2016",
                             to: "Dezembro 2020",
                             descriptions: []
@@ -78,7 +78,7 @@ export default function Main({ language }: Language) {
                         {
                             order: 3,
                             title: "Pós-Graduado em Arquitetura de Aplicações Distribuídas",
-                            institution: "Pontifícia Universidade Católica de Minas Gerais, Belo Horizonte",
+                            institution: "Pontifícia Universidade Católica de Minas Gerais, Belo Horizonte, MG",
                             from: "Abril 2021",
                             to: "Maio 2022",
                             descriptions: []
@@ -121,7 +121,7 @@ export default function Main({ language }: Language) {
                             from: "November 2021",
                             to: "Current",
                             descriptions: [
-                                "As a developer in the Pix team at Banco BMG, I work daily with .NET, AWS, RabbitMQ, Kafka, Postgres, Oracle and Redis. I am also involved in discussions regarding the architecture of new Pix solutions.",
+                                "As a developer in the pix team at Banco BMG, I work daily with .NET, AWS, RabbitMQ, Kafka, Postgres, Oracle and Redis. I am also involved in discussions regarding the architecture of new pix solutions.",
                                 "I am part of the team that was responsible for a project to optimize application availability, achieving 99% of availability, and automate the collection of statistics, reducing the process from 5 days to just 20 minutes."
                             ]
                         }
@@ -133,7 +133,7 @@ export default function Main({ language }: Language) {
                         {
                             order: 1,
                             title: "Computer Technician",
-                            institution: "Colégio COTEMIG, Belo Horizonte, Brazil",
+                            institution: "Colégio COTEMIG, Brazil",
                             from: "February 2013",
                             to: "November 2015",
                             descriptions: []
@@ -141,7 +141,7 @@ export default function Main({ language }: Language) {
                         {
                             order: 2,
                             title: "Bachelor in Information Systems",
-                            institution: "Pontifícia Universidade Católica de Minas Gerais, Contagem, Brazil",
+                            institution: "Pontifícia Universidade Católica de Minas Gerais, Brazil",
                             from: "February 2016",
                             to: "December 2020",
                             descriptions: []
@@ -149,7 +149,7 @@ export default function Main({ language }: Language) {
                         {
                             order: 3,
                             title: "Graduate in Distributed Applications Architecture Specialization",
-                            institution: "Pontifícia Universidade Católica de Minas Gerais, Belo Horizonte, Brazil",
+                            institution: "Pontifícia Universidade Católica de Minas Gerais, Brazil",
                             from: "April 2021",
                             to: "May 2022",
                             descriptions: []
