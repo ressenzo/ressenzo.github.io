@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./Skills.css";
 import Language from "../../shared/language";
 
-interface SkillSection {
+interface SkillModel {
     language: string | null;
     country: string;
     linkedinUrl: string;
@@ -14,7 +14,7 @@ interface SkillSection {
 
 export default function Skills({ language }: Language) {
 
-    const [skill, setSkill] = useState<SkillSection | undefined>(undefined);
+    const [skill, setSkill] = useState<SkillModel | undefined>(undefined);
 
     useEffect(() => {
         let selected = skills.find(x => x.language === language);
@@ -23,7 +23,7 @@ export default function Skills({ language }: Language) {
         setSkill(selected);
     }, [language])
 
-    const skills: SkillSection[] = [
+    const skills: SkillModel[] = [
         {
             language: "pt",
             country: "Brasil",
