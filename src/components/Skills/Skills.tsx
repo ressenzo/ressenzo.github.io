@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Skills.css";
-import Language from "./language";
+import Language from "../../shared/language";
 
 interface SkillSection {
     language: string | null;

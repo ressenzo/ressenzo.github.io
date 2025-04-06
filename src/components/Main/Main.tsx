@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Item, { ItemProps } from "./Item";
-import Language from "./language";
+import Item, { ItemProps } from "../Item/Item";
+import Language from "../../shared/language";
 import "./Main.css";
 
 interface MainModel {
@@ -178,7 +178,7 @@ export default function Main({ language }: Language) {
                     <>
                         <h3>{m.title}</h3>
                         {
-                            m.items.map((v, i) => {
+                            m.items.sort((a, b) => b.order - a.order).map((v, i) => {
                                 return (
                                     <Item
                                         title={v.title}
