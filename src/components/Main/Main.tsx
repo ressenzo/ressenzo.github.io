@@ -167,7 +167,6 @@ export default function Main({ language }: Language) {
         if (selected == null)
             selected = sections.find(x => x.language == null);
         setSelectedSection(selected);
-        // selected?.sections[0].items.toSorted();
     }, [language])
 
     return (
