@@ -3,6 +3,7 @@ import "./Skills.css";
 import Language from "../../shared/language";
 
 interface SkillModel {
+    role: string;
     language: string | null;
     country: string;
     linkedinUrl: string;
@@ -25,9 +26,10 @@ export default function Skills({ language }: Language) {
 
     const skills: SkillModel[] = [
         {
+            role: "Desenvolvedor Sênior .NET",
             language: "pt",
             country: "Brasil",
-            linkedinUrl: "https://www.linkedin.com/in/renan-cossenzo/",
+            linkedinUrl: "https://www.linkedin.com/in/renan-cossenzo/?locale=pt_BR",
             title: "Conhecimentos",
             skills: [
                 "C#",
@@ -46,9 +48,10 @@ export default function Skills({ language }: Language) {
             ]
         },
         {
+            role: ".NET Sr. Software Engineer",
             language: null,
             country: "Brazil",
-            linkedinUrl: "https://www.linkedin.com/in/renan-cossenzo/?locale=en_US",
+            linkedinUrl: "https://www.linkedin.com/in/renan-cossenzo/",
             title: "Skills",
             skills: [
                 "C#",
@@ -69,34 +72,63 @@ export default function Skills({ language }: Language) {
     ]
 
     return (
-        <div className="left-column d-flex flex-column">
-            <h1 className="mb-0">Renan Silva</h1>
-            <p className="mb-0">Belo Horizonte, MG - {skill?.country}</p>
+        <>
+            <h1 className="mb-0 display-3">Renan Silva</h1>
+            <h2 className="display-6">{skill?.role}</h2>
+            <h5 className="mb-0">Belo Horizonte, MG - {skill?.country}</h5>
             <p>
                 <strong>
-                    <a href={skill?.linkedinUrl} target="_blank">Linkedin</a>
+                    <a href={skill?.linkedinUrl} target="_blank" rel="noreferrer">Linkedin</a>
                 </strong>
             </p>
-            <h3>{skill?.title}</h3>
-            <ul className="list-unstyled">
-                {
-                    skill?.skills.map((v, i) => {
-                        return (<li key={i}>{v}</li>);
-                    })
-                }
-            </ul>
+            <div className="mt-4">
+                <SkillItem
+                    title={skill?.title}
+                    items={skill?.skills}
+                    isInlineList={true}
+                />
 
-            <h3>{skill?.languageTitle}</h3>
-            <ul className="list-unstyled">
-                {
-                    skill?.languages.map((x, i) => {
-                        return (<li key={i}>{x}</li>)
-                    })
-                }
-            </ul>
-        </div>
-
+                <SkillItem
+                    title={skill?.languageTitle}
+                    items={skill?.languages}
+                    isInlineList={false}
+                />
+            </div>
+        </>
     );
 }
 
+interface SkillItemModel {
+    title: string | undefined;
+    items: string[] | undefined;
+    isInlineList: boolean;
+}
 
+function SkillItem({
+    title,
+    items,
+    isInlineList
+}: SkillItemModel) {
+    return (
+        <>
+            <h3 className="text-uppercase">{title}</h3>
+            {
+                isInlineList ?
+                    <ul className="list-inline">
+                        {
+                            items?.map((v, i) => {
+                                return (<li className="list-inline-item" key={i}>{v}</li>);
+                            })
+                        }
+                    </ul> :
+                    <ul className="list-unstyled">
+                        {
+                            items?.map((x, i) => {
+                                return (<li key={i}>{x}</li>)
+                            })
+                        }
+                    </ul>
+            }
+        </>
+    )
+}

@@ -170,12 +170,12 @@ export default function Main({ language }: Language) {
     }, [language])
 
     return (
-        <div className="right-column">
+        <>
             {
-                selectedSection?.sections.map((m) => {
+                selectedSection?.sections.map((m, i) => {
                   return (
                     <>
-                        <h3>{m.title}</h3>
+                        <h3 key={i} className="text-uppercase">{m.title}</h3>
                         {
                             m.items.sort((a, b) => b.order - a.order).map((v, i) => {
                                 return (
@@ -186,6 +186,7 @@ export default function Main({ language }: Language) {
                                         institution={v.institution}
                                         order={v.order}
                                         to={v.to}
+                                        key={i}
                                     />
                                 )
                             })
@@ -194,6 +195,6 @@ export default function Main({ language }: Language) {
                   )
                 })
             }
-        </div>
+        </>
     )
 }
