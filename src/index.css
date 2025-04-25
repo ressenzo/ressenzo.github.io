@@ -1,3 +1,10 @@
  body {
   background-color: #ededea;
 }
+
+@media (max-width: 576px) {
+  body {
+    margin-bottom: 80px;
+    margin: 15px;
+  }
+}

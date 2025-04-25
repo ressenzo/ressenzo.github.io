@@ -8,7 +8,7 @@ export default function App() {
 	const [param, _] = useState(new URLSearchParams(window.location.search));
 
 	return (
-		<div className="container py-3">
+		<div className="container">
 			<header className="app-header mx-auto">
 				<div className="pt-3 pb-5">
 					<Skills language={param.toString().substring(2)} />

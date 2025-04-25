@@ -6,3 +6,19 @@
         color: currentColor;
     }
 /* } */
+
+a {
+    color: #000;
+}
+
+a:hover {
+    opacity: 0.6;
+}
+
+h1>span.place {
+    font-size: 1.1rem;
+}
+
+p.place-sd {
+    margin-top: -5px;
+}

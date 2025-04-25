@@ -73,15 +73,18 @@ export default function Skills({ language }: Language) {
 
     return (
         <>
-            <h1 className="mb-0 display-3">Renan Silva</h1>
-            <h2 className="display-6">{skill?.role}</h2>
-            <h5 className="mb-0">Belo Horizonte, MG - {skill?.country}</h5>
-            <p>
-                <strong>
-                    <a href={skill?.linkedinUrl} target="_blank" rel="noreferrer">Linkedin</a>
-                </strong>
-            </p>
-            <div className="mt-4">
+            <div className="d-flex align-items-center vh-100">
+                <div className="d-none d-lg-block">
+                    <h1>Renan Silva - <span className="place align-middle">Belo Horizonte, MG - {skill?.country}</span></h1>
+                    <h2 className="display-1">{skill?.role}</h2>
+                </div>
+                <div className="d-block d-lg-none">
+                    <h1 className="mb-0">Renan Silva</h1>
+                    <p className="fs-4 place-sd">Belo Horizonte, MG - {skill?.country}</p>
+                    <h2 className="display-1">{skill?.role}</h2>
+                </div>
+            </div>
+            <div>
                 <SkillItem
                     title={skill?.title}
                     items={skill?.skills}
