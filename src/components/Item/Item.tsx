@@ -1,13 +1,5 @@
+import ItemModel from "../../shared/item";
 import "./Item.css";
-
-export interface ItemProps {
-    order: number;
-    title: string;
-    institution: string;
-    from: string;
-    to: string;
-    descriptions: string[];
-}
 
 export default function Item({
     title,
@@ -15,7 +7,7 @@ export default function Item({
     from,
     to,
     descriptions
-}: ItemProps) {
+}: ItemModel) {
     return (
         <div className="mb-4 item">
             <h5>{title} - <small className="text-body-secondary">{institution}</small>

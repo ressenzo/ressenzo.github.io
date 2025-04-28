@@ -1,0 +1,5 @@
+.list-inline-item+.list-inline-item::before {
+    content: "|";
+    margin: 0 0.5rem;
+    color: currentColor;
+}

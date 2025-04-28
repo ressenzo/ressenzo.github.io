@@ -1,0 +1,7 @@
+a.main-link {
+    color: #000;
+}
+
+a:hover.main-link {
+    opacity: 0.6;
+}
