@@ -16,18 +16,17 @@ export default function Header({ language }: LanguageModel) {
     }, [language])
 
     return (
-        <>
-            <div className="d-flex align-items-center vh-100">
-                <div className="d-none d-lg-block">
-                    <h1>Renan Silva - <span className="header-place align-middle">Belo Horizonte, MG - {info?.country} (GMT-3)</span></h1>
-                    <h2 className="display-1">{info?.role}</h2>
-                </div>
-                <div className="d-block d-lg-none">
-                    <h1 className="mb-0">Renan Silva</h1>
-                    <p className="fs-4 header-place-sd">Belo Horizonte, MG - {info?.country} (GMT-3)</p>
-                    <h2 className="display-1">{info?.role}</h2>
-                </div>
+        // <div className="d-flex align-items-center vh-100">
+        <div className="d-flex align-items-center header-content">
+            <div className="d-none d-lg-block">
+                <h1>Renan Silva - <span className="header-place align-middle">Belo Horizonte, MG - {info?.country} (GMT-3)</span></h1>
+                <h2 className="display-1">{info?.role}</h2>
             </div>
-        </>
+            <div className="d-block d-lg-none">
+                <h1 className="mb-0">Renan Silva</h1>
+                <p className="fs-4 header-place-sd">Belo Horizonte, MG - {info?.country} (GMT-3)</p>
+                <h2 className="display-1">{info?.role}</h2>
+            </div>
+        </div>
     );
 }
