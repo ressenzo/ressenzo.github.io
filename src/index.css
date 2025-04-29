@@ -2,8 +2,14 @@
    background-color: #ededea;
  }
 
+ @media (min-width: 577px) {
+  body {
+    margin-bottom: 50px;
+  }
+}
+
  @media (max-width: 576px) {
    body {
-     margin: 15px 15px 80px 15px;
+     margin: 15px 10px 80px 10px;
    }
  }
