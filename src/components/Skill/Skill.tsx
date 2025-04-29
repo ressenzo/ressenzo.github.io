@@ -10,10 +10,10 @@ export default function Skill({
         <div className="mt-5">
             <h3 className="text-uppercase">{title}</h3>
             {
-                <ul className={isInlineList ? "list-inline" : "list-unstyled"}>
+                <ul className={isInlineList ? "skill-list-inline list-inline" : "list-unstyled"}>
                     {
                         skills?.map((v, i) => {
-                            return (<li className={isInlineList ? "list-inline-item" : ""} key={i}>{v}</li>);
+                            return (<li className={isInlineList ? "list-inline-item" : undefined} key={i}>{v}</li>);
                         })
                     }
                 </ul>
